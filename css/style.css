@@ -1,0 +1,405 @@
+
+/*  VARIABLES GLOBALES – DEFINIDAS EN :root */
+/* Aquí se definen colores y fuentes que puedes usar en todo el CSS */
+
+:root {
+    --primary-color: #2D3047; /* Azul oscuro – lo usamos como fondo para frases importantes */
+    --secondary-color: #419D78; /* Verde – puedes usarlo para otras secciones más adelante */
+    --text-color: #472d2e; /* Color para los textos normales */
+    --background-color: #FAFAFA; /* Color general de fondo para la página */
+    --font-primary: 'Inter', sans-serif; /* Fuente principal que estamos usando */
+}
+/* Asegura que todo el padding y border estén dentro del ancho total */
+* {
+    box-sizing: border-box;
+}
+
+/* 🔧 RESET DEL BODY PARA EVITAR ESPACIOS EN BLANCO */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary); /* usamos tu fuente definida */
+    background-color: var(--background-color); /* fondo general */
+    color: var(--text-color); /* color de texto general */
+}
+/* ESTILOS BÁSICOS PARA EL HEADER Y NAV */
+
+/*  HEADER CON NAV ALINEADO A LA DERECHA */
+header {
+    display: flex; /* activa Flexbox */
+    justify-content: space-between; /* separa h1 a la izquierda y nav a la derecha */
+    align-items: center; /* centra verticalmente */
+    padding: 1rem 2rem;
+    font-family: var(--font-primary);
+    width: 100%; /* asegura que el header ocupe todo el ancho */
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem; /* Espacio entre enlaces */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1rem;
+}
+/*  ESTILOS PARA LA SECCIÓN HERO */
+
+.hero-section {
+    height: 100vh; /* 100% de la altura de la pantalla */
+    position: relative;
+    display: flex; /* Usamos Flexbox para alinear elementos */
+    justify-content: flex-start; /* Mueve los elementos hacia la izquierda -- Horizontal */
+    align-items: center; /* Centra los elementos en el eje vertical */
+    background-color: #f8f9fa; /* Fondo claro */
+    margin-bottom: 0; /* Elimina el margen inferior para evitar espacio extra */
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+/*  Esto lo investigué por mi cuenta.
+   Es similar a background-size: cover, que sí vimos en clase.
+   object-fit: cover permite que la imagen <img> se recorte y llene su contenedor sin deformarse. */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen se recorte pero mantenga proporción */
+}
+
+.hero-content {
+    position: relative; /* Mantiene la caja en su lugar */
+    z-index: 2; /* Asegura que esta caja esté encima de la imagen */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con 90% de opacidad */
+    padding: 3rem; /* Espacio interno: 48px arriba, abajo, izquierda y derecha */
+    margin-left: 5%; /* Mueve la caja un 10% hacia la derecha */
+    max-width: 600px; /* Limita el ancho máximo a 600px para mejorar legibilidad */
+    border-radius: 12px; /* Bordes redondeados con curva de 12px */
+    top: -100px; /* Aquí es lo importante: el valor negativo moverá la caja hacia arriba */
+}
+/*  ESTILOS PARA FRASES DE INSPIRACIÓN */
+/* Este bloque da estilo a la frase debajo del hero */
+
+.full-width-section {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3rem 0;
+    margin-top: 0;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.full-width-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.full-width-section p {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: white;
+    margin: 0;
+}
+
+/* Fondo azul oscuro */
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+/* Fondo verde */
+.bg-secondary {
+    background-color: var(--secondary-color);
+}
+/* Ajuste para imágenes en las tarjetas de viajes */
+.travel-card img,
+.travel-card-horizontal img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px 8px 0 0;
+}
+/* SECCIÓN DE VIAJES – TARJETAS CON FLEX Y FOTOS */
+.travel-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.travel-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 300px;
+    text-align: center;
+    font-family: var(--font-primary);
+    overflow: hidden;
+}
+.travel-card-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.travel-card-horizontal .text {
+    padding: 1.5rem;
+    flex: 1;
+}
+.travel-container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+}
+.travel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  /* SECCIÓN DE CONTACTO */
+  .contact-section {
+    padding: 3rem 2rem;
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    font-family: var(--font-primary);
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.contact-section form {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-section label {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+}
+
+.contact-section button {
+    width: fit-content;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    justify-self: center;
+}
+
+/* FOOTER DEL SITIO */
+.site-footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/*  ESTILOS PARA LA SECCIÓN DE MÚSICA */
+.books-section, .music-section, .audio-section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: var(--font-primary);
+}
+
+.book-photo {
+    text-align: center;
+  }
+  
+  
+  
+.book-photo img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto 2rem;
+    border-radius: 12px;
+  
+}
+
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.book-table th, .book-table td {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: left;
+}
+
+.book-table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.book-table td a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+/* SECCIÓN DE TABLAS */
+.table-section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: var(--font-primary);
+  }
+  
+  .table-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  table th, table td {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+   /* HERO DE LA PÁGINA INSPIRATION */
+.hero-inspiration {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem 4rem;
+    margin-bottom: 3rem;
+}
+
+.hero-inspiration-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-inspiration h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero-inspiration p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #ddd;
+}
+
+/* SECCIÓN DE LIBROS CON FONDO GRIS */
+.section-libros-bg {
+    background-color: #f2f2f2;
+    width: 100%;
+    padding: 3rem 0;
+  }
+  
+  /* SECCIÓN DE VIDEOS */
+  .video-section {
+    margin: 50px auto 4rem;
+    padding: 2rem;
+    max-width: 900px;
+    font-family: var(--font-primary);
+    background-color: #f9f9f9;
+    border: 3px dotted #444; /* Borde punteado */
+    border-radius: 10px;
+}
+
+  .video-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .video-grid {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .video-grid iframe {
+    width: 300px;
+    height: 170px;
+    border-radius: 8px;
+    border: none;
+  }
+  .figure-overlay {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .figure-overlay img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+  }
+  
+  .figure-overlay figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(45, 48, 71, 0.7); /* azul oscuro con transparencia */
+    color: white;
+    padding: 0.8rem;
+    font-size: 1rem;
+    text-align: center;
+    font-style: italic;
+    border-radius: 0 0 12px 12px;
+  }
+   
+.video-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
