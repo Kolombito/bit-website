@@ -33,14 +33,14 @@ Este proyecto refleja lo que aprendí con el profesor Javier en el curso de Desa
 
 ##  Estructura del Proyecto
 bit-website/ 
-│ 
-├── css/ │ 
-└── style.css 
-├── img/ │ └── (todas las imágenes usadas en el proyecto) 
-├── index.html 
-├── inspiration.html 
-├── README.md
-La página de galería fue retirada para simplificar el desarrollo y optimizar el contenido actual. 
+- │ 
+- ├── css/ │ 
+- └── style.css 
+- ├── img/ │ └── (todas las imágenes usadas en el proyecto) 
+- ├── index.html 
+- ├── inspiration.html 
+- ├── README.md
+- La página de galería fue retirada para simplificar el desarrollo y optimizar el contenido actual. 
 ##  Proceso de diseño
 
 1. Realicé un **moodboard y wireframe en Figma** para definir el estilo visual. (parcial me enrede con este proceso)
