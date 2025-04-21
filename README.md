@@ -38,6 +38,7 @@ Este proyecto refleja lo que aprendí con el profesor Javier en el curso de Desa
 - Reorganización visual del hero para adaptarse a cada dispositivo
 - Pruebas visuales en 3 puntos de quiebre oficiales del curso
 
+<<<<<<< HEAD
 ---
 
 ## Estructura del Proyecto
@@ -49,8 +50,6 @@ bit-website/ │
 ├── index.html 
 ├── inspiration.html 
 └── README.md
-
----
 
 ## Proceso de diseño
 
