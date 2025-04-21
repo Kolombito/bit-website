@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horacio Mendoza | Mi mundo personal </title>
-    <link rel="icon" href="img/favicon.ico.png" type="image/x-icon">
     <!-- ENLACE A CSS: VA AQUÍ -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -18,23 +17,22 @@
         <nav>
             <a href="index.html">Inicio</a>
             <a href="inspiration.html">Inspiración</a>
-            
+            <a href="gallery.html">Galería</a>
             
         </nav>
     </header>
     
     <!--  SECCIÓN DE BIENVENIDA CON IMAGEN (HERO) -->
     <section class="hero-section">
-      <img src="./img/horacio.jpg" alt="Foto de Horacio Mendoza" class="hero-image" />
+        <div class="hero-image">
+            <img src="./img/horacio.jpg" alt="Horacio Mendoza sentado en una plaza">
+        </div>
+        <div class="hero-content">
+            <h2>¡Bienvenidos a mi mundo!</h2>
+            <p>Soy Horacio Mendoza, un apasionado explorador de la vida. Mi viaje me ha llevado por diversos caminos, desde las montañas de los Andes hasta las playas del Caribe, cada experiencia moldeando quien soy hoy.</p>
+            <p>Me encanta viajar, descubrir nuevas culturas y aprender de cada persona que conozco en el camino. La fotografía es mi manera de capturar estos momentos únicos, y los libros son mis compañeros constantes de viaje.</p>
+        </div>
     </section>
-    
-    <section class="intro-content">
-      <div class="hero-content">
-        <h1>¡Bienvenidos a mi mundo!</h1>
-        <p>Este es un espacio donde comparto lo que soy, lo que aprendo, y lo que imagino. Gracias por estar aquí.</p>
-      </div>
-    </section>
-    
     <!--  CITA INSPIRADORA -->
 <div class="full-width-section bg-primary">
     <div class="container">
@@ -71,32 +69,25 @@
     </div>
   </section>
   
-<!-- nueva cita Inspiradora-->
+
 <div class="full-width-section bg-secondary">
     <div class="container">
       <p>"No siempre sé a dónde voy, pero viajar me recuerda que el camino también es parte del destino."</p>
     </div>
   </div>
   <!-- SECCIÓN DE CONTACTO -->
-  <section class="contact-section">
+<section class="contact-section">
     <div class="contact-container">
       <h2>Contáctame</h2>
       <p>¿Tienes preguntas, ideas o simplemente quieres saludar? ¡Escríbeme!</p>
       <form>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-  
-        <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" name="correo" placeholder="Tu correo" required>
-  
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
-  
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Tu correo" required>
+        <textarea rows="5" placeholder="Tu mensaje" required></textarea>
         <button type="submit">Enviar</button>
       </form>
     </div>
   </section>
-  
   <!-- FOOTER -->
 <footer class="site-footer">
     <p>&copy; 2025 Horacio Mendoza. Todos los derechos reservados.</p>
