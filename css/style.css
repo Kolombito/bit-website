@@ -93,12 +93,18 @@ nav a {
 }
 /* SECCIÓN DE VIAJES – TARJETAS CON FLEX Y FOTOS */
 .travel-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
 }
+
+@media screen and (min-width: 768px) {
+  .travel-row {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 .travel-card {
     background-color: white;
